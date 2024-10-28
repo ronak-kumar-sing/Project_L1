@@ -1,0 +1,643 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'monument';
+  src: url('monument.otf');
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+  font-family:'gilroy';
+  background-color: #f8f8f8;
+}
+#main{
+  height: 100%;
+  width: 100%;
+  padding-top:0.1px ;
+  position: relative;
+}
+
+#nav{
+  width: 100%;
+  height: 10vh;
+  margin-top:5vh ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 5%; */
+  border-top: black 2px solid;
+  border-bottom: black 2px solid;
+}
+
+#nav h1{
+  height: 100%;
+  width: 29%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monument ;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: -3px;
+  cursor: pointer;
+  position: relative;
+}
+
+#nav h1::after{
+  content: '©️';
+  font-size: 0.34em;
+  font-weight: 100;
+  position: absolute;
+  top: 26%;
+  right: 21%;
+}
+#nav h1::before {
+  font-family: 'gilroy';
+  content: 'Model Management';
+  font-size: 0.32em;
+  font-weight: 700;
+  letter-spacing: .2px;
+  position: absolute;
+  bottom:19%;
+  right: 26%;
+}
+
+#nav h2{
+  height: 100%;
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: black 2px solid;
+  font-size: 1.5em;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+#nav h2:nth-child(4) {
+  width: 40%;
+}
+
+#nav h2:nth-last-child(1) {
+  width: 10%;
+}
+#nav h2:nth-last-child(1):hover{
+  width: 30%;
+}
+
+#center{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:2% 5%;
+}
+
+#center #video_content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#center #video_content video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#center #video_content #video_text{
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 2vh;
+
+}
+
+#over1{
+  font-family: monument;
+  font-size:x-large;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh;
+}
+
+#over1 h1:nth-last-child(1){
+  width: 9vh;
+  height: 9vh;
+  border-radius: 50%;
+  font-size: 1em;
+  font-weight: 400;
+  border:#f8f8f8 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#over1 h1:nth-last-child(1)::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -1;
+  top: -1;
+  rotate: -45deg;
+  border-bottom: rgba(0, 0, 0, 0.693) 3px solid;
+  border-radius: 50%;
+}
+
+#over2{
+  padding: 1vw;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#over2 img{
+  width: 4%;
+  height: 4%;
+}
+
+#scroll{
+  width: 100%;
+  height: vh;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.contener{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  animation-name: anime;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
+
+#scroll img{
+  /* display: none; */
+  width: 11vw;
+  height: 11vw;
+  object-fit: cover;
+  margin: 1.5vw 2.7vw;
+  object-position: top;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#alpab{
+  margin-top : 5vh;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  padding: 0% 4%;
+  justify-content: space-between;
+  align-items: center;
+  border-top: black 2px solid;
+  border-bottom: black 2px solid;
+}
+#alpab h1{
+  font-weight: 700;
+  letter-spacing: -1px;
+  /* underline */
+  text-decoration: underline;
+}
+
+#alpab h2{
+
+  width: 2em;
+  height: 2em;
+  font-weight: 400;
+  font-size: 1.2em;
+  border-radius: 50%;
+  border: rgba(0, 0, 0, 0) 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#alpab h2:hover{
+  border: black 2px solid;
+}
+
+#page2{
+  width: 100%;
+  height:100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2% 5%;
+}
+#page-left{
+  width: 50%;
+  height: 100%;
+}
+
+#page-left img{
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+}
+
+#page-right{
+  width: 40%;
+  height: 100%;
+}
+
+#page-right img{
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+#buttom-right{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+#buttom-right h3{
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.5em;
+}
+#buttom-right p {
+  width: 50%;
+}
+#page3{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5% 5%;
+}
+#page3 #left{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#page3 #left #left-top{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#page3 #left #text{
+  height: 27vh;
+  width: 27vh;
+  animation: rotatingtext 10s linear infinite;
+}
+
+#page3 #left #arrow2{
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@keyframes rotatingtext {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+#page3 #right{
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+#page3 #right img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#page4 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5% 5%;
+  position: relative;
+  padding-bottom:2% ;
+}
+
+#page4 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;;
+}
+
+#page4 h1{
+  height: 2em;
+  width: 2em;
+  font-size: 2.5em;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 13%;
+  right: 8%;
+  color: white;
+  border: white 2px solid;
+  border-radius: 50%;
+}
+
+#page5 {
+  width: 100%;
+  height: 100vh;
+  padding: 5% 5%;
+}
+
+#page5>h1{
+  font-family: monument;
+  text-align: center;
+  font-size: 4.5em;
+  font-weight: 900;
+  letter-spacing: -1px;
+  /* padding: 5vh; */
+}
+
+#update{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#update .elme{
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  padding: 0% 5%;
+  border-top: black 2px solid;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+.elme>h1{
+  padding: 3vh;
+  width: 16%;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.elme:nth-last-child(1){
+  border-bottom: black 2px solid;
+}
+
+.elme img{
+  width: 13vh;
+  height: 13vh;
+  display: flex;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1% 10%;
+  position: absolute;
+  left: 17%;
+  transition: all 0.8s ease;
+  opacity: 0.5;
+}
+.elme:hover{
+  background-color: #e7e7e7ec;
+}
+.elme:hover img{
+  border: black 2px solid;
+  left: 68%;
+  opacity: 1;
+}
+
+.in-left{
+  margin-left: 10vw;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#page6{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5% 5%;
+}
+
+#left-page6{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#left-page6 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#right-page6{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 1%;
+}
+#right-page6>h1{
+  font-family: monument;
+  font-size: 2.5em;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+#right-page6>h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.6em;
+}
+#right-page6>p{
+  font-size: 1em;
+  font-weight: 500;
+}
+
+#right-page6-bottom{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+#right-page6-bottom img{
+  width: 48%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#marque{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: black 2px solid;
+  border-bottom: black 2px solid;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+
+#marque h1{
+  text-transform: uppercase;
+  padding: 0% 3%;
+  font-size: 5vh;
+  font-family: monument;
+  color: transparent;
+  -webkit-text-stroke: black 1px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation-name:anime;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+
+}
+
+#footer{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  margin: 20vh 0;
+  border-top: black 2px solid;
+}
+
+#footer-in {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black 2px solid;
+}
+
+#footer-in h1 {
+  height: 100%;
+  width: 29%;
+  display: flex;
+  justify-content: center;
+  font-family: monument;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: -3px;
+  padding: 2vh;
+  cursor: pointer;
+  position: relative;
+}
+
+#footer-in h1::after {
+  content: '©️';
+  font-size: 0.34em;
+  font-weight: 100;
+  position: absolute;
+  top: 9%;
+  right: 21%;
+}
+
+#footer-in h1::before {
+  font-family: 'gilroy';
+  content: 'Model Management';
+  font-size: 0.32em;
+  font-weight: 700;
+  letter-spacing: .2px;
+  position: absolute;
+  bottom: 60%;
+  right: 26%;
+}
+
+#footer-in>h2 {
+  height: 100%;
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  border-left: black 2px solid;
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 2vh;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+
+#footclass{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: black 2px solid;
+}
+#footclass h2{
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: -1px;
+  border-bottom: black 2px solid;
+}
+
+
+@keyframes anime {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
