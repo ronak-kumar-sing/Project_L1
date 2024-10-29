@@ -207,8 +207,7 @@
               alt="Model 2 posing outdoors">
             <div id="buttom-right">
               <h3>Lorem ipsum, dolor sit<br> adipisicing elit. Alias<br> voluptatem debitis doloribus <br> laudantium!</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus earum dolor dolorum numquam quaerat maiores,
-                eum veniam ratione nemo quia blanditiis enim dicta iste.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus earum dolor dolorum numquam quaerat maiores.</p>
             </div>
           </div>
         </div>
@@ -247,7 +246,23 @@
           </nav>
         </div>
   </div>
+  <script>
+    function adjustPageWidth() {
+      const page = document.body;
+      if (window.innerWidth <= 600) {
+        page.style.transform = "scale(2)";
+        page.style.transformOrigin = "top left";
+        page.style.width = "50%";
+      } else {
+        page.style.transform = "scale(1)";
+        page.style.width = "100%";
+      }
+    }
 
+    // Run the function on page load and when the window is resized
+    window.addEventListener("load", adjustPageWidth);
+    window.addEventListener("resize", adjustPageWidth);
+  </script>
 </body>
 
 </html>

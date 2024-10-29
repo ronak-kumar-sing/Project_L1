@@ -1,6 +1,6 @@
 *{
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
   box-sizing: border-box;
 }
 
@@ -29,7 +29,6 @@ body, html{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0 5%; */
   border-top: black 2px solid;
   border-bottom: black 2px solid;
 }
@@ -171,7 +170,7 @@ body, html{
 
 #scroll{
   width: 100%;
-  height: vh;
+  height: 25vh;
   white-space: nowrap;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -695,12 +694,58 @@ body, html{
   border-bottom: black 2px solid;
 }
 
-
 @keyframes anime {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translateX(0%);
   }
-  to {
+  100% {
     transform: translateX(-100%);
   }
+
+}
+
+@media (max-width:600px) {
+
+  html{
+    width: 220%;
+  }
+
+  #nav h1{
+    font-size: 1.7em;
+  }
+  #nav h1::after{
+    font-size: 0.3em;
+    top: 36%;
+    right: 13%;
+  }
+  #nav h1::before {
+    font-size: 0.35em;
+    bottom: 19%;
+    right: 26%;
+  }
+    #scroll {
+      width: 100%;
+      height: 25vh;
+      white-space: nowrap;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .contener {
+      width: 130%;
+      height: 100%;
+      display: inline-block;
+      animation-name: anime;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-delay: 1s;
+    }
+
+    #scroll img {
+      /* display: none; */
+      width: 20vh;
+      height: 20vh;
+    }
+
 }
